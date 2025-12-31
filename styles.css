@@ -1,3 +1,13 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.hero{
+  overflow: hidden; /* prevent hero children from causing horizontal scroll */
+}
+
 .hero-inner{
   position: relative; /* KEY: makes absolute children anchor to this */
 }
@@ -63,6 +73,41 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+.hero-middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 3;
+  backdrop-filter: blur(2px);
+}
+
+.hero-middle h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  text-shadow:
+    0 2px 8px rgba(0,0,0,0.45),
+    0 0 20px rgba(0,0,0,0.35);
+}
+
+.hero-middle p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+}
+
+.hero-center h1,
+.hero-center p{
+  background: rgba(0,0,0,0.25);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
 }
 
 /* Mobile: collapse nav (simple version) */
