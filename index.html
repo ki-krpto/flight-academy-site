@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flight Academy — Mockup</title>
+  <meta name="description" content="Fallbrook Flight Academy Website.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="background">
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <img class="hero-image" src="Assets/Placeholder.jpg" alt="Flight Academy" />
+      </div>
+      <div class="top-left">
+        <a href="/">
+          <img src="Assets/placeholder-logo.png" alt="Flight Academy Logo">
+        </a>
+        <div class="top-left-text">
+          <p>Fallbrook Flight</p>
+          <p>Academy</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>Short intro about the academy — mission, experience, and safety focus.</p>
+      </div>
+    </section>
+
+    <section id="courses" class="section">
+      <div class="container">
+        <h2>Our Courses</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Private Pilot</h3>
+            <p>Learn the fundamentals with hands-on flight time.</p>
+          </article>
+          <article class="card">
+            <h3>Instrument Rating</h3>
+            <p>Master flying in low-visibility conditions.</p>
+          </article>
+          <article class="card">
+            <h3>Commercial Pilot</h3>
+            <p>Complete the training required for a commercial license.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Get in touch to request course details or schedule a visit.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Flight Academy. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>
+    // Small helpers: set current year and mobile nav toggle
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('nav-toggle');
+    const siteNav = document.getElementById('site-nav');
+    navToggle.addEventListener('click', () => {
+      siteNav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

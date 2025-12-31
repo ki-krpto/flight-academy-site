@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flight Academy — Template</title>
+  <meta name="description" content="A simple, responsive HTML template for Flight Academy site">
+  <link rel="stylesheet" href="styles.css">
+  <!--
+    Tips:
+    - Customize colors and typography in `styles.css`.
+    - Duplicate sections and update content as needed.
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">Flight Academy</a>
+      <button id="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav id="site-nav" class="site-nav">
+        <a href="#about">About</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Welcome to Flight Academy</h1>
+        <p>Train with experienced instructors and take your piloting skills to the next level.</p>
+        <p><a class="btn-primary" href="#courses">View Courses</a></p>
+        <!-- Example image from Assets folder -->
+        <img class="hero-image" src="Assets/9fa9a4_a937f4ff2dce4e578497f87cbab5dd7e.avif" alt="Flight Academy" />
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>Short intro about the academy — mission, experience, and safety focus.</p>
+      </div>
+    </section>
+
+    <section id="courses" class="section">
+      <div class="container">
+        <h2>Our Courses</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Private Pilot</h3>
+            <p>Learn the fundamentals with hands-on flight time.</p>
+          </article>
+          <article class="card">
+            <h3>Instrument Rating</h3>
+            <p>Master flying in low-visibility conditions.</p>
+          </article>
+          <article class="card">
+            <h3>Commercial Pilot</h3>
+            <p>Complete the training required for a commercial license.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Get in touch to request course details or schedule a visit.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Flight Academy. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>
+    // Small helpers: set current year and mobile nav toggle
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('nav-toggle');
+    const siteNav = document.getElementById('site-nav');
+    navToggle.addEventListener('click', () => {
+      siteNav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
