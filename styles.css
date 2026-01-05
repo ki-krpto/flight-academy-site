@@ -2,7 +2,9 @@ html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background: #ffffff; /* neutral base */
 }
+
 
 .hero{
   overflow: hidden; /* prevent hero children from causing horizontal scroll */
@@ -83,24 +85,31 @@ html, body {
   text-align: center;
   color: white;
   z-index: 3;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 90vw;
 }
 
 .hero-middle h1 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(1.5rem, 5vw, 3.5rem);
   font-weight: 300;
   letter-spacing: 0.08em;
   text-shadow:
     0 2px 8px rgba(0,0,0,0.45),
     0 0 20px rgba(0,0,0,0.35);
+  margin: 0;
+  line-height: 1.2;
 }
 
 .hero-middle p {
   margin-top: 0.5rem;
-  font-size: 1rem;
-  letter-spacing: 0.12em;
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
 }
 
 .hero-center h1,
@@ -110,9 +119,368 @@ html, body {
   border-radius: 4px;
 }
 
+.cta-button {
+    display: inline-block;
+  padding: 0.9rem 2.2rem;
+
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: transparent;
+
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+
+  transition: 
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background: #ffffff;
+  color: #0a2540; /* deep aviation blue */
+}
+
+
+/* ===== Section 2 (Guidance / About) ===== */
+.about-section {
+  background: #e9f4f8;          /* softer, premium light blue */
+  padding: 4rem 2rem;           /* breathing room */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: rgba(0,0,0,0.78);
+}
+
+.FFA-text {
+  max-width: 820px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+  border-radius: 14px;
+  padding: 2rem 2.25rem;
+  border-left: 4px solid rgba(10, 37, 64, 0.18);
+}
+
+.FFA-text p{
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(0,0,0,0.74);
+}
+
+.FFA-text p + p{
+  margin-top: 1rem; /* creates the “breath” */
+}
+
+/* === Courses Section === */
+.journey-band{
+  background: #ffffff;
+  padding: 3.5rem 1.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.journey-wrap{
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.journey-band h2{
+  margin: 0 0 1rem 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: rgba(0,0,0,0.84);
+}
+
+.journey-lead{
+  margin: 0 auto 2rem auto;
+  max-width: 70ch;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.75;
+  color: rgba(0,0,0,0.68);
+}
+
+.journey-points{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.point{
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 1.25rem 1.25rem;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+  text-align: left;
+}
+
+.point-title{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 800;
+  color: rgba(10,37,64,0.88);
+  margin-bottom: 0.35rem;
+}
+
+.point-sub{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: rgba(0,0,0,0.64);
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+
+/* ===== Offerings (Cirrus-style) ===== */
+.offerings-section{
+  background: #ececec; /* warm light gray like the reference */
+  padding: 5rem 1.5rem;
+}
+
+.offerings-wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.eyebrow{
+  margin: 0 0 0.75rem 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.55);
+}
+
+.section-title{
+  margin: 0 0 2rem 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: rgba(0,0,0,0.85);
+}
+
+/* Left column blocks */
+.offer-block{
+  padding: 1.25rem 0 2rem 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.offer-block:first-of-type{
+  border-top: none;
+  padding-top: 0;
+}
+
+.offer-block h3{
+  margin: 0 0 0.6rem 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 750;
+  color: rgba(0,0,0,0.84);
+}
+
+.offer-block p{
+  margin: 0 0 1.1rem 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.7;
+  color: rgba(0,0,0,0.70);
+  max-width: 46ch;
+}
+
+/* Outline buttons like the reference */
+.outline-btn{
+  display: inline-block;
+  padding: 0.85rem 1.6rem;
+  border: 2px solid rgba(0,0,0,0.75);
+  color: rgba(0,0,0,0.85);
+  background: transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.outline-btn:hover{
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Right column (Intro Flight) */
+.offerings-right .body{
+  margin: 0 0 1.25rem 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.8;
+  color: rgba(0,0,0,0.72);
+  max-width: 55ch;
+}
+
+.price-row{
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.price{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #0a2540;
+}
+
+.price-note{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: rgba(0,0,0,0.55);
+}
+
+/* reuse your CTA style, add dark fill variant */
+.cta-button.dark{
+  border: 2px solid #0a2540;
+  color: #0a2540;
+}
+
+.cta-button.dark:hover{
+  background: #0a2540;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.actions{
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.text-link{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  text-decoration: none;
+  color: rgba(10,37,64,0.88);
+  font-weight: 650;
+}
+
+.text-link:hover{ text-decoration: underline; }
+
+/* Mobile: stack */
+@media (max-width: 900px){
+  /*courses section*/
+  .journey-points{ grid-template-columns: 1fr; }
+  .point{ text-align: center; }
+
+  /* offerings section */
+  .offerings-wrap{
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+
 /* Mobile: collapse nav (simple version) */
 @media (max-width: 800px){
   .hero-nav{ display: none; }
   .brand-logo{ width: 44px; height: 44px; }
   .brand-text p{ font-size: 1rem; }
+  
+  .hero-middle {
+    padding: 0 2rem;
+    max-width: 95vw;
+  }
+  
+  .hero-middle h1 {
+    font-size: clamp(1.25rem, 6vw, 2.5rem);
+    letter-spacing: 0.05em;
+  }
+  
+  .hero-middle p {
+    font-size: clamp(0.7rem, 3vw, 0.9rem);
+    letter-spacing: 0.03em;
+  }
+  
+  .FFA-text {
+    max-width: 95%;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px){
+  .hero-middle {
+    padding: 0 1.5rem;
+    max-width: 98vw;
+  }
+  
+  .hero-middle h1 {
+    font-size: clamp(1.1rem, 7vw, 2rem);
+    letter-spacing: 0.03em;
+    line-height: 1.1;
+  }
+  
+  .hero-middle p {
+    font-size: clamp(0.65rem, 3.5vw, 0.8rem);
+    letter-spacing: 0.02em;
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.7rem;
+  }
+  
+  .FFA-text {
+    max-width: 98%;
+    padding: 1rem;
+    font-size: 0.95rem;
+    border-radius: 6px;
+  }
+}
+
+.FFA-text {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Large tablets and small desktops */
+@media (min-width: 801px) and (max-width: 1200px){
+  .hero-middle h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+  
+  .hero-middle p {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+  }
 }
